@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+html, body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+html{
+  background-color: cadetblue;
+  background-image: url("https://www.chieflearningofficer.com/wp-content/uploads/sites/3/beans/images/AdobeStock_302543130-8b38574.jpg");
+  background-size: cover;
+}
+h1{
+  font-size: 48px;
+  color: rgb(6, 17, 68);
+  text-shadow: 2px 2px 1px black, 2px 2px 9px rgb(127, 229, 255);
+  font-family: 'Homemade Apple', cursive;
+
+}
+label{
+  
+  color: rgb(89, 0, 255);
+  text-shadow: 1px 1px 1px black;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 5px;
+ 
+  
+
+}
+.input {
+  background-color: rgba(140, 175, 240, 0.5);
+  height: 30px;
+  border-radius: 5px;
+  border: 2px dotted blue;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 5px;
+  
+}
+::placeholder{
+  color: rgba(73, 7, 59, 0.74);
+}
+.input:hover{
+  border: 2px dotted rgb(30, 255, 0);
+}
+#content{
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 65vh;
+  width: 32vw;
+  background-color: rgba(189, 190, 103, 0.856);
+  box-shadow: 1px 1px 2px black;
+  border-radius: 15px;
+  
+  
+}
+#randomize{
+  margin-top: 20px;
+  height: 50px;
+  width: 110px;
+  border-radius: 7px;
+  border: 3px outset rgba(123, 255, 0, 0.651);
+  box-shadow: 1px 1px black;
+  background-color: rgba(42, 94, 173, 0.582);
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+#randomize:hover{
+  transform: scale(1.2);
+  border: 3px outset rgba(198, 44, 236, 0.651)
+}
+.input-chunk{
+  display: grid;  
+  height: 50px;
+  grid-template-columns: 110px 280px 100px;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-items: left;
+
+  
+}
+.inputBtn{
+  width: 100px;
+  height: 40px;
+  width: 100px;
+  border-radius: 7px;
+  border: 3px outset rgba(255, 81, 0, 0.712);
+  box-shadow: 1px 1px black;
+  background-color: rgba(42, 94, 173, 0.582);
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  
+}
+#showList{
+  margin-top: 20px;
+  height: 50px;
+  width: 110px;
+  border-radius: 7px;
+  border: 3px outset rgba(123, 255, 0, 0.651);
+  box-shadow: 1px 1px black;
+  background-color: rgba(42, 94, 173, 0.582);
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+}
+#showList:hover{
+  border: 3px outset rgba(0, 17, 255, 0.651);
+  transform: scale(1.2);
+  
+}
+
+.inputBtn:hover{
+  border: 3px outset rgba(98, 0, 255, 0.651);
+  
+
+}
+
+#bottomBtns {
+  display: flex;
+  width: 20vw;
+  justify-content: space-around;
+}
+#lists {
+  padding-top:20px;
+  padding-left: 30px; 
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(153, 50, 204, 0.795);
+  border-radius: 25px;
+  box-shadow: 1px 1px 3px black;
+  width: 30vw;
+  height: 60vh;
+  justify-content: safe space-around;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  overflow-y: scroll;
+  visibility: hidden;
+  
+}
+li {
+  
+font-size: 20px;
+font-weight: 100;
+}
+</style>
+
+<head>
+  <title>InspaBucket</title>
+  <script src="index.js" defer></script>
+  <link rel="shortcut icon" href="https://static.thenounproject.com/png/3491750-200.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Homemade+Apple&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="lists">
+    <div id="genreListArea">
+      <h3>Genres</h3>
+      <ul id="genreList">
+        <li>Test Genre 1</li>
+        <li>Test Genre 2</li>
+      </ul>
+    </div>
+    <div id="singerListArea">
+      <h3>Singers</h3>
+      <ul id="singerList">
+        <li>Test Singer 1</li>
+        <li>Test Singer 2</li>
+      </ul>
+    </div>
+    
+    <div id="tempoListArea">
+      <h3>Tempos</h3>
+      <ul id="tempoList">
+        <li>Test Tempo 1</li>
+        <li>Test Tempo 2</li>
+      </ul>
+    </div>
+    <div id="goalsListArea">
+      <h3>Goals</h3>
+      <ul id="goalsList">
+        <li>Test Goals 1</li>
+        <li>Test Goals 2</li>
+      </ul>
+    </div>
+    <div id="keywordListArea">
+      <h3>Keywords</h3>
+      <ul id="keywordList">
+        <li>Test Keyword 1</li>
+        <li>Test Keyword 2</li>
+      </ul>
+    </div>
+    <div id="beatListArea">
+      <h3>Possible Random Beats</h3>
+      <ul id="beatList">
+        <li>Test Keyword 1</li>
+        <li>Test Keyword 2</li>
+      </ul>
+    </div>
+  </div>
+  <div id="content" class="container">
+   <h1>Inspa Bucket</h1>
+    <div id="genre" class="input-chunk">
+      <label for="genreInput">Genre:</label>
+      <input type="text" name="genre" id="genreInput" class="input" placeholder="Genre">
+      <button id="genreSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="singer" class="input-chunk">
+      <label for="singerInput">Singer:</label>
+      <input type="text" name="singer" id="singerInput" class="input" placeholder="Singer">
+      <button id="singerSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="tempo" class="input-chunk">
+      <label for="tempoInput">Tempo:</label>
+      <input type="text" name="tempo" id="tempoInput" class="input" placeholder="Tempo">
+      <button id="tempoSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="goals" class="input-chunk">
+      <label for="goalsInput">Goals:</label>
+      <input type="text" name="goals" id="goalsInput" class="input" placeholder="Goals">
+      <button id="goalsSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="keyword" class="input-chunk">
+      <label for="keywordInput">Keyword:</label>
+      <input type="text" name="keyword" id="keywordInput" class="input" placeholder="Keyword">
+      <button id="keywordSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="beat" class="input-chunk">
+      <label for="beatInput">Beat:</label>
+      <input type="number" name="beat" id="beatInput" class="input" placeholder="Random Beat">
+      <button id="beatSubmit" class="inputBtn">submit</button>
+    </div>
+    <div id="bottomBtns">
+    <button id="randomize">Randomize</button>
+    <button id="showList">Show Master List</button>
+  </div>
+  </div>
+
+
+
+
+</body>
+
+
+</html>
+
+
+<!-- To Do -->
+
+<!-- optional: flag the item in the list/change its color for a moment if you already have it in the list when you hit submit.-->
+
+<!-- Local Storage Functionality or Server Support -->
